@@ -1,0 +1,64 @@
+$theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d9d9d9)
+
+@function color($color-name)
+  @return map-get($theme-colors, $color-name)
+
+.container
+  h4
+    color: color(title-light)
+
+  h2
+    color: color(title)
+    text-transform: uppercase
+
+  .title-span
+    position: absolute
+    width: 40%
+    height: 5px
+    margin-top: 2px
+    background-color: color(title-light)
+    margin-left: 10px
+
+.blog-content
+  img
+    margin: 1em auto
+    width: 100%
+  .blog-photography
+    color: #005dff
+    font-size: .8em
+    font-weight: bold
+  .blog-title
+    color: color(title)
+    font-size: 2.2em
+    font-weight: bold
+    text-transform: uppercase
+  .blog-subtitle
+    color: color(title-light)
+    font-size: .8em
+
+  .blog-date
+    color: color(title-light)
+    text-transform: uppercase
+  .hr
+    height: 5px
+
+  div.read-more
+    background-color: color(box-color)
+    width: 100%
+    height: 50px
+
+  .read-more-text
+    text-transform: uppercase
+
+.related-blogs
+  display: flex
+  img
+    margin: 1em auto
+    width: 50%
+  .related-blog-details h3
+    color: color(title)
+    font-size: 1em
+    font-weight: bold
+    text-transform: uppercase
+
+
