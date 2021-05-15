@@ -52,13 +52,19 @@ $theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d
 
 .related-blogs
   display: flex
+  cursor: pointer
+  &:hover
+    background-color: color(box-color)
   img
-    margin: 1em auto
-    width: 50%
-  .related-blog-details h3
-    color: color(title)
-    font-size: 1em
-    font-weight: bold
-    text-transform: uppercase
+    height: 100px
+    width: 150px
+    padding: 10px
+.related-blog-details
+  padding: 10px
+  color: color(title)
+  font-size: 0.7em
+  font-weight: bold
+  text-transform: uppercase
+
 
 

@@ -50,17 +50,13 @@
   </div>
 </div>
 
-<!--<div class="container">-->
-<!--  <div class="related-blogs">-->
-<!--    <div class="related-blog-img">-->
-<!--      <img class="related-blog-image" src="https://picsum.photos/200" alt="Fetching image">-->
-<!--    </div>-->
-<!--    <div class="related-blog-details">-->
-<!--      <h3>Related blog titles</h3>-->
-<!--      <i class="fas fa-comment-alt"></i>-->
-<!--      1-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-<img class="" src="https://picsum.photos/200" alt="Fetching image">
+<div class="container related-blogs"  *ngFor="let n of numSequence(6)">
+  <div class="related-blog-img">
+    <img class="related-blog-image" src="https://picsum.photos/200" alt="Fetching image">
+  </div>
+  <div class="related-blog-details">
+    <h3>Related blog titles</h3>
+    <i class="fas fa-comment-alt"></i>
+    1
+  </div>
+</div>
