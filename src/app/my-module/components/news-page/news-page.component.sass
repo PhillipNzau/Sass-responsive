@@ -3,13 +3,17 @@ $theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d
 @function color($color-name)
   @return map-get($theme-colors, $color-name)
 
-.container
-  h4
+.topics-selection
+  .topic-title
     color: color(title-light)
+    font-weight: bold
+    font-size: .8em
 
-  h2
+  .super-title
     color: color(title)
     text-transform: uppercase
+    font-weight: bold
+    font-size: 1.4em
 
   .title-span
     position: absolute
@@ -22,6 +26,8 @@ $theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d
 .blog-img
   position: relative
   background: linear-gradient(45deg, rgba(29, 236, 197, 0.5), rgba(91, 14, 214, 0.5) 100%)
+  border-radius: 8px
+
 
   img
     margin: 1em auto
@@ -31,10 +37,11 @@ $theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d
     backface-visibility: hidden
     opacity: 1
     display: block
+    border-radius: 8px
 
 
   .blog-img-overlay
-    transition: .5s ease
+    transition: .7s ease
     opacity: 0
     position: absolute
     top: 50%
@@ -43,9 +50,11 @@ $theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d
     -ms-transform: translate(-50%, -50%)
     text-align: center
     width: 100%
+
   .text
     color: black
     font-size: 15px
+
     .ico
       background: white
       border-radius: 50%
@@ -59,11 +68,10 @@ $theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d
   opacity: 1
 
 
-
-  //.blog-img:hover
-  //  position: absolute
-  //  background: linear-gradient(45deg, rgba(29, 236, 197, 0.5), rgba(91, 14, 214, 0.5) 100%)
-
+//.blog-img:hover
+//  position: absolute
+//  background: linear-gradient(45deg, rgba(29, 236, 197, 0.5), rgba(91, 14, 214, 0.5) 100%)
+.blog-body
   .blog-photography
     color: #005dff
     font-size: .8em
@@ -86,20 +94,33 @@ $theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d
     color: color(title-light)
     text-transform: uppercase
 
-  .hr
-    height: 5px
+.hr
+  height: 5px
 
-  div.read-more
-    background-color: color(box-color)
-    width: 100%
-    height: 50px
+.blog-subtitle
+  color: color(title-light)
+  font-size: 1em
+
+.read-more
+  background-color: color(box-color)
+  width: 100%
+  height: 50px
 
   .read-more-text
     text-transform: uppercase
+    font-size: .8em
+    font-weight: bold
+
+  .read-more-icons i
+    color: color(title-light)
+
 
 .related-blogs
   display: flex
   cursor: pointer
+
+  ::after
+
 
   &:hover
     background-color: color(box-color)
@@ -115,6 +136,28 @@ $theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d
   font-size: 0.7em
   font-weight: bold
   text-transform: uppercase
+
+  i
+    color: color(title-light)
+
+.article
+  margin: 3px 0px
+  border-bottom: 1px dashed color(title-light)
+
+
+.more-btn
+  margin: 1em auto
+  background-color: #2b2b2c
+  padding: 20px
+  width: 150px
+  height: 50px
+
+  button
+    color: white
+    border-radius: 0
+    margin: -15px auto 0
+    font-weight: bold
+
 
 
 

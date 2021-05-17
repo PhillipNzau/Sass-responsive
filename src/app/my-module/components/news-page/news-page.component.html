@@ -1,10 +1,10 @@
 <app-navbar></app-navbar>
-
-<div class="container pt-2">
-  <h4 class="ps-2">Personal</h4>
-  <div class="p-2 pb-5">
+<!--Topics selections section-->
+<section class="container pt-2 topics-selection">
+  <h4 class="ps-2 topic-title">Personal</h4>
+  <div class="p-2">
     <div class="float-start">
-      <h2>life & living</h2>
+      <h2 class="super-title">life & living</h2>
     </div>
     <div class="mt-2 ">
       <span class="title-span"></span>
@@ -13,7 +13,7 @@
 
   <div class="blog-content p-2">
     <div class="blog-img">
-      <img class="blog-image" src="https://picsum.photos/200" alt="Fetching image">
+      <img class="blog-image shadow" src="https://picsum.photos/200" alt="Fetching image">
       <div class="blog-img-overlay">
         <div class="text">
           <div class="ico float-start p-3">
@@ -51,22 +51,43 @@
       <div class="float-start p-3">
         <h6 class="float-start pe-2 read-more-text">read more </h6><i class="fas fa-arrow-circle-right float-end"></i>
       </div>
-      <div class="float-end p-3">
-        <i class="fab fa-facebook-square pe-5"></i>
-        <i class="fab fa-twitter-square pe-5"></i>
+      <div class="float-end p-3 read-more-icons">
+        <i class="fab fa-facebook-square pe-3"></i>
+        <i class="fab fa-twitter-square pe-3"></i>
         <i class="fab fa-pinterest-p"></i>
       </div>
     </div>
   </div>
-</div>
+</section>
+<!-- End Topics selections section-->
 
-<div class="container related-blogs"  *ngFor="let n of numSequence(6)">
-  <div class="related-blog-img">
-    <img class="related-blog-image" src="https://picsum.photos/200" alt="Fetching image">
+<!--Related topics section-->
+<section class="container related-topics">
+  <div *ngFor="let n of numSequence(6)">
+    <div class="related-blogs"  >
+      <div class="related-blog-img ">
+        <img class="related-blog-image" src="https://picsum.photos/200" alt="Fetching image">
+      </div>
+      <div class="related-blog-details">
+        <h6>You Will Never Thought That Knowing Photography Is So Good</h6>
+        <i class="fas fa-comment-alt"></i>
+        1
+      </div>
+    </div>
+    <div class="article"></div>
   </div>
-  <div class="related-blog-details">
-    <h3>Related blog titles</h3>
-    <i class="fas fa-comment-alt"></i>
-    1
+  <div class="load-more p-4">
+    <div class="more-btn text-center">
+      <button class="btn ">MORE</button>
+    </div>
   </div>
-</div>
+</section>
+<!-- End Related topics section-->
+
+
+
+
+
+
+
+
