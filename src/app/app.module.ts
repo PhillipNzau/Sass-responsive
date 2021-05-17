@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import {MyModuleRoutingModule} from './my-module/my-module-routing.module';
 import {MyModuleModule} from './my-module/my-module.module';
+import { NgxScrollTopModule } from 'ngx-scrolltop';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {MyModuleModule} from './my-module/my-module.module';
     BrowserModule,
     AppRoutingModule,
     MyModuleRoutingModule,
-    MyModuleModule
+    MyModuleModule,
+    NgxScrollTopModule
   ],
   providers: [],
   bootstrap: [AppComponent]
