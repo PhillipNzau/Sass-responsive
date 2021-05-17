@@ -3,26 +3,24 @@ $theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d
 @function color($color-name)
   @return map-get($theme-colors, $color-name)
 
-.topics-selection
-  .topic-title
-    color: color(title-light)
-    font-weight: bold
-    font-size: .8em
+.super-title
+  color: color(title)
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 1.4em
 
-  .super-title
-    color: color(title)
-    text-transform: uppercase
-    font-weight: bold
-    font-size: 1.4em
+.topic-title
+  color: color(title-light)
+  font-weight: bold
+  font-size: .8em
 
-  .title-span
-    position: absolute
-    width: 40%
-    height: 5px
-    margin-top: 2px
-    background-color: color(title-light)
-    margin-left: 10px
-
+.title-span
+  position: absolute
+  width: 40%
+  height: 5px
+  margin-top: 2px
+  background-color: color(title-light)
+  margin-left: 10px
 .blog-img
   position: relative
   background: linear-gradient(45deg, rgba(29, 236, 197, 0.5), rgba(91, 14, 214, 0.5) 100%)
@@ -114,13 +112,9 @@ $theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d
   .read-more-icons i
     color: color(title-light)
 
-
 .related-blogs
   display: flex
   cursor: pointer
-
-  ::after
-
 
   &:hover
     background-color: color(box-color)
@@ -159,5 +153,74 @@ $theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d
     font-weight: bold
 
 
+.category-titles
+  position: relative
+  //background: linear-gradient(45deg, rgba(29, 236, 197, 0.5), rgba(91, 14, 214, 0.5) 100%)
+  border-radius: 8px
+
+  &:hover
+    cursor: pointer
+
+  img
+    margin: 1em auto
+    width: 100%
+    height: 100%
+    transition: .2s ease
+    backface-visibility: hidden
+    opacity: 1
+    display: block
+    border-radius: 8px
+
+.category-title-overlay
+  transition: .2s ease
+  opacity: 0.5
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%)
+  width: 100%
+
+.title-overlay-banner
+  padding: 20px
+  background-color: black
+  height: 150px
+  color: white
+
+.category-titles:hover .category-title-overlay
+  opacity: 1
+
+.separator
+  display: flex
+  align-items: center
+  text-align: center
+
+.separator
+  &::after
+    content: ''
+    flex: 1
+    border-bottom: 5px solid color(title-light)
+  &::before
+    content: ''
+    flex: 1
+    border-bottom: 5px solid color(title-light)
+
+.separator:not(:empty)::before
+  margin-right: .25em
 
 
+.separator:not(:empty)::after
+  margin-left: .25em
+
+.footer
+  background-color: black
+  color: white
+  height: 100px
+  margin-top: 100px
+.footer-content
+  margin: 1em auto
+  padding-top: 30px
+  width: 100%
+.back-to-top:hover
+  cursor: pointer
+  text-decoration: underline
