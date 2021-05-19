@@ -1,0 +1,226 @@
+$theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d9d9d9)
+$margin-bottom: 50px
+@function color($color-name)
+  @return map-get($theme-colors, $color-name)
+
+.topics-selection
+  margin-bottom: $margin-bottom
+.super-title
+  color: color(title)
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 1.4em
+
+.topic-title
+  color: color(title-light)
+  font-weight: bold
+  font-size: .8em
+
+.title-span
+  position: absolute
+  width: 40%
+  height: 5px
+  margin-top: 2px
+  background-color: color(title-light)
+  margin-left: 10px
+.blog-img
+  position: relative
+  background: linear-gradient(45deg, rgba(29, 236, 197, 0.5), rgba(91, 14, 214, 0.5) 100%)
+  border-radius: 8px
+
+
+  img
+    margin: 1em auto
+    width: 100%
+    height: 100%
+    transition: .5s ease
+    backface-visibility: hidden
+    opacity: 1
+    display: block
+    border-radius: 8px
+
+
+  .blog-img-overlay
+    transition: .7s ease
+    opacity: 0
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+    text-align: center
+    width: 100%
+
+  .text
+    color: black
+    font-size: 15px
+
+    .ico
+      background: white
+      border-radius: 50%
+      margin: 0px 60px
+
+//related-topics section
+.blog-img:hover img
+  opacity: 0.3
+
+.blog-img:hover .blog-img-overlay
+  opacity: 1
+
+
+//.blog-img:hover
+//  position: absolute
+//  background: linear-gradient(45deg, rgba(29, 236, 197, 0.5), rgba(91, 14, 214, 0.5) 100%)
+.blog-body
+  .blog-photography
+    color: #005dff
+    font-size: .8em
+    font-weight: bold
+
+  .blog-title
+    color: color(title)
+    font-size: 2.2em
+    font-weight: bold
+    text-transform: uppercase
+
+    &:hover
+      text-decoration: underline
+
+  .blog-subtitle
+    color: color(title-light)
+    font-size: .8em
+
+  .blog-date
+    color: color(title-light)
+    text-transform: uppercase
+
+.hr
+  height: 5px
+
+.blog-subtitle
+  color: color(title-light)
+  font-size: 1em
+
+.read-more
+  background-color: color(box-color)
+  width: 100%
+  height: 50px
+
+  .read-more-text
+    text-transform: uppercase
+    font-size: .8em
+    font-weight: bold
+
+  .read-more-icons i
+    color: color(title-light)
+
+.related-blogs
+  display: flex
+  cursor: pointer
+
+  &:hover
+    background-color: color(box-color)
+
+  img
+    height: 100px
+    width: 150px
+    padding: 10px
+
+.related-blog-details
+  padding: 10px
+  color: color(title)
+  font-size: 0.7em
+  font-weight: bold
+  text-transform: uppercase
+
+  i
+    color: color(title-light)
+
+.article
+  margin: 3px 0px
+  border-bottom: 1px dashed color(title-light)
+
+
+.more-btn
+  margin: 1em auto
+  background-color: #2b2b2c
+  padding: 20px
+  width: 150px
+  height: 50px
+
+  button
+    color: white
+    border-radius: 0
+    margin: -15px auto 0
+    font-weight: bold
+
+
+//advanced review system
+.review-section
+  margin-bottom: $margin-bottom
+
+.category-titles
+  position: relative
+  //background: linear-gradient(45deg, rgba(29, 236, 197, 0.5), rgba(91, 14, 214, 0.5) 100%)
+  border-radius: 8px
+
+  &:hover
+    cursor: pointer
+
+  img
+    margin: 1em auto
+    width: 100%
+    height: 100%
+    transition: .2s ease
+    backface-visibility: hidden
+    opacity: 1
+    display: block
+    border-radius: 8px
+
+.category-title-overlay
+  transition: .2s ease
+  opacity: 0.5
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%)
+  width: 100%
+
+.title-overlay-banner
+  padding: 20px
+  background-color: black
+  height: 150px
+  color: white
+
+.category-titles:hover .category-title-overlay
+  opacity: 1
+
+.separator
+  display: flex
+  align-items: center
+  text-align: center
+
+.separator
+  &::after
+    content: ''
+    flex: 1
+    border-bottom: 5px solid color(title-light)
+  &::before
+    content: ''
+    flex: 1
+    border-bottom: 5px solid color(title-light)
+
+.separator:not(:empty)::before
+  margin-right: .25em
+
+
+.separator:not(:empty)::after
+  margin-left: .25em
+
+//category styling
+.list-group-item
+  &:hover
+    background-color: color(title-light)
+
+

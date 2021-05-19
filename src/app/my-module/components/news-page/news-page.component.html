@@ -1,0 +1,143 @@
+<app-navbar></app-navbar>
+<!--Topics selections section-->
+<section class="container pt-2 topics-selection">
+  <h4 class="ps-2 topic-title">Personal</h4>
+  <div class="p-2">
+    <div class="float-start">
+      <h2 class="super-title">life & living</h2>
+    </div>
+    <div class="mt-2 ">
+      <span class="title-span"></span>
+    </div>
+  </div>
+
+  <div class="blog-content p-2">
+    <div class="blog-img">
+      <img class="blog-image shadow" src="https://picsum.photos/200" alt="Fetching image">
+      <div class="blog-img-overlay">
+        <div class="text">
+          <div class="ico float-start p-3">
+            <i class="fas fa-search "></i>
+          </div>
+          <div class="ico float-end p-3">
+            <i class="fas fa-link"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-body p-2 mb-4">
+      <p class="blog-photography">PHOTOGRAPHY</p>
+      <h3 class="blog-title">Five Inconvenient truth why..</h3>
+      <h6 class="blog-subtitle pb-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dolorum laudantium
+        molestias quibusdam</h6>
+      <div class="blog-date">
+        <div class="float-start">
+          <i class="fas fa-clock me-1"></i>
+          <span>July 8, 2020</span>
+        </div>
+        <div class="float-end">
+          <i class="fas fa-comment-alt"></i>
+          1
+        </div>
+      </div>
+    </div>
+    <hr class="hr">
+    <div>
+      <h6 class="blog-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, esse, rerum!
+        Consequuntur cupiditate earum magni placeat voluptatibus?...</h6>
+    </div>
+    <div class="read-more">
+      <div class="float-start p-3" routerLink="/detail-news">
+        <h6 class="float-start pe-2 read-more-text">read more </h6><i class="fas fa-arrow-circle-right float-end"></i>
+      </div>
+      <div class="float-end p-3 read-more-icons">
+        <i class="fab fa-facebook-square pe-3"></i>
+        <i class="fab fa-twitter-square pe-3"></i>
+        <i class="fab fa-pinterest-p"></i>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Topics selections section-->
+
+<!--Related topics section-->
+<section class="container related-topics">
+  <div *ngFor="let n of numSequence(6)">
+    <div class="related-blogs">
+      <div class="related-blog-img ">
+        <img class="related-blog-image" src="https://picsum.photos/200" alt="Fetching image">
+      </div>
+      <div class="related-blog-details">
+        <h6>You Will Never Thought That Knowing Photography Is So Good</h6>
+        <i class="fas fa-comment-alt"></i>
+        1
+      </div>
+    </div>
+    <div class="article"></div>
+  </div>
+  <div class="load-more p-4">
+    <div class="more-btn text-center">
+      <button class="btn">MORE</button>
+    </div>
+  </div>
+</section>
+<!-- End Related topics section-->
+
+<!--Advanced review system-->
+<section class="container review-section">
+  <h4 class="ps-2 topic-title text-center">Personal</h4>
+  <div class="separator">
+    <h3 class="super-title text-center review-title">Advanced Review stystem</h3>
+  </div>
+  <div class="category-titles shadow" *ngFor="let n of numSequence(4)">
+    <img class="category-title-img" src="https://picsum.photos/seed/picsum/200" alt="">
+    <div class="category-title-overlay">
+      <div class="title-overlay-banner ps-5 pe-5">
+        <p>Fashion</p>
+        <h3>The Hidden Agenda</h3>
+        <div>
+          <div class="float-start">
+            July 11, 202
+          </div>
+          <div class="float-end">
+            Iolsbel Faulkner
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Advanced review system-->
+
+<!--Category section-->
+<section class="container category-section">
+  <h4 class="ps-2 topic-title p-1">Take your pick</h4>
+  <h3 class="super-title review-title p-2">Categories</h3>
+  <ul class="list-group shadow">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      A list item
+      <span class="badge bg-primary rounded-pill">14</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      A second list item
+      <span class="badge bg-primary rounded-pill">2</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      A third list item
+      <span class="badge bg-primary rounded-pill">1</span>
+    </li>
+  </ul>
+</section>
+<!-- End Category section-->
+
+<!--Section Footer-->
+<app-footer></app-footer>
+<!--End Section Footer-->
+
+
+
+
+
+
+
