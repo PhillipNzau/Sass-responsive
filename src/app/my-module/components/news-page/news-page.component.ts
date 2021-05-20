@@ -8,12 +8,16 @@ import {Router} from '@angular/router';
   styleUrls: ['./news-page.component.sass']
 })
 export class NewsPageComponent implements OnInit {
-  blogs: [] | undefined;
-  // bgImg = [];
-  // bgCategory = [];
-  // bgTitle = [];
-  // bgContent = [];
-  // bgDate = [];
+  blogs = {
+    id: undefined,
+    bg_img: undefined,
+    bg_title: undefined,
+    bg_content: undefined,
+    bg_author: undefined,
+    bg_upload_date: undefined,
+    bg_category: undefined,
+  };
+
 
   constructor(
     public service: BackendService,
@@ -25,14 +29,7 @@ export class NewsPageComponent implements OnInit {
     this.service.getAllBlogs()
       .subscribe(blogResults => {
         this.blogs = blogResults.results;
-        // @ts-ignore
-        // this.bgImg = this.blogs.map(bgImg => bgImg.bg_img);
-        // this.bgCategory = blogResults.results.map((bgCat: { bg_category: any; }) => bgCat.bg_category);
-        // this.bgTitle = blogResults.results.map((bgTitle: { bg_title: any; }) => bgTitle.bg_title);
-        // this.bgContent = blogResults.results.map((bgContent: { bg_content: any; }) => bgContent.bg_content);
-        // this.bgDate = blogResults.results.map((bgDate: { bg_upload_date: any; }) => bgDate.bg_upload_date);
 
-        // console.log(this.blogs.bg_img);
       });
   }
 
