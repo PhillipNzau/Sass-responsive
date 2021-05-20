@@ -13,7 +13,7 @@
 
   <div class="blog-content p-2" *ngFor="let blog of blogs">
     <div class="blog-img">
-      <img class="blog-image shadow img-fluid" [src]="bgImg" alt="Fetching image">
+      <img class="blog-image shadow img-fluid" [src]="blog.bg_img" alt="Fetching image">
       <div class="blog-img-overlay">
         <div class="text">
           <div class="ico float-start p-3">
@@ -27,13 +27,13 @@
     </div>
 
     <div class="blog-body p-2 mb-4">
-      <p class="blog-photography">{{bgCategory}}</p>
-      <h3 class="blog-title">{{bgTitle}}</h3>
-      <h6 class="blog-subtitle pb-1">{{bgContent}}</h6>
+      <p class="blog-photography">{{blog.bg_category}}</p>
+      <h3 class="blog-title">{{blog.bg_title}}</h3>
+      <h6 class="blog-subtitle pb-1">{{blog.bg_content}}</h6>
       <div class="blog-date">
         <div class="float-start">
           <i class="fas fa-clock me-1"></i>
-          <span>{{bgDate}}</span>
+          <span>{{blog.bg_upload_date}}</span>
         </div>
         <div class="float-end">
           <i class="fas fa-comment-alt"></i>
