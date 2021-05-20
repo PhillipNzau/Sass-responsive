@@ -9,13 +9,13 @@ import {Router} from '@angular/router';
 })
 export class NewsPageComponent implements OnInit {
   blogs = {
-    id: [],
-    bg_img: [],
-    bg_title: [],
-    bg_content: [],
-    bg_author: [],
-    bg_upload_date: [],
-    bg_category: [],
+    id: '',
+    bg_img: '',
+    bg_title: '',
+    bg_content: '',
+    bg_author: '',
+    bg_upload_date: '',
+    bg_category: '',
   };
 
 
