@@ -1,7 +1,9 @@
-<<<<<<< HEAD
-# SassResponsive
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+# Sass-responsive
+
+> Simple responsive Angular 11 app using sass 
+
+
 
 ## Development server
 
@@ -23,10 +25,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
-# Sass-responsive
-Simple responsive Angular app using sass 
->>>>>>> 3ad5c0913c11dcbcd02aa96d5f9ca760e6f35f60

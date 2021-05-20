@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <div class="blog-content p-2" *ngFor="let blog of blogs">
+  <div class="blog-content p-2" *ngFor="let blog of allBlogs">
     <div class="blog-img">
       <img class="blog-image shadow img-fluid" [src]="blog.bg_img" alt="Fetching image">
       <div class="blog-img-overlay">
@@ -25,6 +25,7 @@
         </div>
       </div>
     </div>
+    
 
     <div class="blog-body p-2 mb-4">
       <p class="blog-photography">{{blog.bg_category}}</p>
