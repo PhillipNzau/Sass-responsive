@@ -9,6 +9,11 @@ import {Router} from '@angular/router';
 })
 export class NewsPageComponent implements OnInit {
   blogs = [];
+  bgImg = [];
+  bgCategory = [];
+  bgTitle = [];
+  bgContent = [];
+  bgDate = [];
 
   constructor(
     public service: BackendService,
@@ -20,9 +25,13 @@ export class NewsPageComponent implements OnInit {
     this.service.getAllBlogs()
       .subscribe(blogResults => {
         this.blogs = blogResults.results;
-        // @ts-ignore
-        // this.carName = carResults.results.map(car => car.name);
-        console.log(this.blogs.bg_img);
+        this.bgImg = blogResults.results.map((bgImg: { bg_img: any; }) => bgImg.bg_img);
+        this.bgCategory = blogResults.results.map((bgCat: { bg_category: any; }) => bgCat.bg_category);
+        this.bgTitle = blogResults.results.map((bgTitle: { bg_title: any; }) => bgTitle.bg_title);
+        this.bgContent = blogResults.results.map((bgContent: { bg_content: any; }) => bgContent.bg_content);
+        this.bgDate = blogResults.results.map((bgDate: { bg_upload_date: any; }) => bgDate.bg_upload_date);
+
+        // console.log(this.blogs.bg_img);
       });
   }
 
