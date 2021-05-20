@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {BackendService} from '../../services/backend.service';
 import {Router} from '@angular/router';
+import {Blog} from '../../../interfaces/blogs';
 
 @Component({
   selector: 'app-news-page',
@@ -8,15 +9,17 @@ import {Router} from '@angular/router';
   styleUrls: ['./news-page.component.sass']
 })
 export class NewsPageComponent implements OnInit {
-  blogs = {
-    id: '',
-    bg_img: '',
-    bg_title: '',
-    bg_content: '',
-    bg_author: '',
-    bg_upload_date: '',
-    bg_category: '',
-  };
+  // blogs = {
+  //   id: '',
+  //   bg_img: '',
+  //   bg_title: '',
+  //   bg_content: '',
+  //   bg_author: '',
+  //   bg_upload_date: '',
+  //   bg_category: '',
+  // };
+
+  blogs: Blog[] = [];
 
 
   constructor(
