@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import {MyModuleRoutingModule} from './my-module/my-module-routing.module';
 import {MyModuleModule} from './my-module/my-module.module';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
     AppRoutingModule,
     MyModuleRoutingModule,
     MyModuleModule,
-    NgxScrollTopModule
+    NgxScrollTopModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

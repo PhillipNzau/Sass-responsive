@@ -9,6 +9,7 @@ import {MyModuleComponent} from './my-module.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DetailedNewsComponent } from './components/news-page/children/detailed-news/detailed-news.component';
 import { AddBlogComponent } from './components/news-page/children/add-blog/add-blog.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AddBlogComponent } from './components/news-page/children/add-blog/add-b
   imports: [
     CommonModule,
     MyModuleRoutingModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ]
 })
 export class MyModuleModule {
