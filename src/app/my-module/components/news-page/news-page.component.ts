@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {BackendService} from '../../services/backend.service';
 import {Router} from '@angular/router';
+import {Blog} from '../../../interfaces/blogs';
+import {Category} from '../../../interfaces/category';
 
 @Component({
   selector: 'app-news-page',
@@ -8,8 +10,9 @@ import {Router} from '@angular/router';
   styleUrls: ['./news-page.component.sass']
 })
 export class NewsPageComponent implements OnInit {
-  blogs = Array();
-  categories = Array();
+  // blogs = Array();
+  categories: Category[] = [];
+  blogs: Blog[] = [];
 
   constructor(
     public service: BackendService,
