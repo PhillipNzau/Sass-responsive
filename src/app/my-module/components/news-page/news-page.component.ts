@@ -8,8 +8,8 @@ import {Router} from '@angular/router';
   styleUrls: ['./news-page.component.sass']
 })
 export class NewsPageComponent implements OnInit {
-  blogs = [];
-  categories = [];
+  blogs = Array();
+  categories = Array();
 
   constructor(
     public service: BackendService,
