@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {BackendService} from '../../services/backend.service';
 import {Router} from '@angular/router';
 import {Blog} from '../../../interfaces/blogs';
+import {Category} from '../../../interfaces/category';
 
 @Component({
   selector: 'app-news-page',
@@ -9,16 +10,8 @@ import {Blog} from '../../../interfaces/blogs';
   styleUrls: ['./news-page.component.sass']
 })
 export class NewsPageComponent implements OnInit {
-  // blogs = {
-  //   id: '',
-  //   bg_img: '',
-  //   bg_title: '',
-  //   bg_content: '',
-  //   bg_author: '',
-  //   bg_upload_date: '',
-  //   bg_category: '',
-  // };
-
+  // blogs = Array();
+  categories: Category[] = [];
   blogs: Blog[] = [];
 
 
@@ -32,6 +25,13 @@ export class NewsPageComponent implements OnInit {
     this.service.getAllBlogs()
       .subscribe(blogResults => {
         this.blogs = blogResults.results;
+        // @ts-ignore
+        // this.carName = carResults.results.map(car => car.name);
+        console.log('blog image', this.blogs.bg_img);
+      });
+    this.service.getAllCategories()
+      .subscribe(categoryResult => {
+        this.categories = categoryResult.results;
 
       });
   }
