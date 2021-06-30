@@ -14,6 +14,7 @@ export class NewsPageComponent implements OnInit {
   categories: Category[] = [];
   blogs: Blog[] = [];
 
+
   constructor(
     public service: BackendService,
     private router: Router
@@ -31,6 +32,7 @@ export class NewsPageComponent implements OnInit {
     this.service.getAllCategories()
       .subscribe(categoryResult => {
         this.categories = categoryResult.results;
+
       });
   }
 
