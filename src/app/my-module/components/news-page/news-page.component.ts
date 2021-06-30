@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 })
 export class NewsPageComponent implements OnInit {
   blogs = [];
+  categories = [];
 
   constructor(
     public service: BackendService,
@@ -22,7 +23,11 @@ export class NewsPageComponent implements OnInit {
         this.blogs = blogResults.results;
         // @ts-ignore
         // this.carName = carResults.results.map(car => car.name);
-        console.log(this.blogs.bg_img);
+        console.log('blog image', this.blogs.bg_img);
+      });
+    this.service.getAllCategories()
+      .subscribe(categoryResult => {
+        this.categories = categoryResult.results;
       });
   }
 

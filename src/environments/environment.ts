@@ -2,7 +2,7 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 // const blogBaseUrl = 'https://my-blog-apiv1.herokuapp.com/';
-const blogBaseUrl = 'http://127.0.0.1:8000/';
+const blogBaseUrl = 'http://127.0.0.1:4210/';
 
 
 export const environment = {

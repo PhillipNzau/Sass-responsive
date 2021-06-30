@@ -15,4 +15,7 @@ export class BackendService {
   getAllBlogs(): Observable<any> {
     return this.http.get<any>(environment.blogBackend);
   }
+  getAllCategories(): Observable<any> {
+    return this.http.get<any>(environment.blogCategory);
+  }
 }
