@@ -10,7 +10,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DetailedNewsComponent } from './components/news-page/children/detailed-news/detailed-news.component';
 import { AddBlogComponent } from './components/news-page/children/add-blog/add-blog.component';
 import {HttpClientModule} from '@angular/common/http';
-import {StickyModule} from 'ngx-sticky-kit';
 
 
 @NgModule({
@@ -26,8 +25,7 @@ import {StickyModule} from 'ngx-sticky-kit';
         CommonModule,
         MyModuleRoutingModule,
         AppRoutingModule,
-        HttpClientModule,
-        StickyModule
+        HttpClientModule
     ]
 })
 export class MyModuleModule {
