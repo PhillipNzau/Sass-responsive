@@ -1,10 +1,20 @@
 $theme-colors: (title: #2b2b2c, title-light: lighten(#2b2b2c, 40), box-color: #d9d9d9)
 $margin-bottom: 50px
+$border: 1px solid #808080
+$desktop: 840px
+
 @function color($color-name)
   @return map-get($theme-colors, $color-name)
 
+@mixin desktop
+  @media (min-width: #{$desktop})
+    @content
+
 .topics-selection
   margin-bottom: $margin-bottom
+
+  @include desktop
+    width: 80vh
 .super-title
   color: color(title)
   text-transform: uppercase
@@ -23,10 +33,15 @@ $margin-bottom: 50px
   margin-top: 2px
   background-color: color(title-light)
   margin-left: 10px
+
+.blog-holder
+  //@include desktop
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 .blog-img
   position: relative
-  background: linear-gradient(45deg, rgba(29, 236, 197, 0.5), rgba(91, 14, 214, 0.5) 100%)
-  border-radius: 8px
+  //background: linear-gradient(45deg, rgba(29, 236, 197, 0.5), rgba(91, 14, 214, 0.5) 100%)
+  //border-radius: 8px
+
 
   img
     margin: 1em auto
@@ -36,7 +51,7 @@ $margin-bottom: 50px
     backface-visibility: hidden
     opacity: 1
     display: block
-    border-radius: 8px
+    //border-radius: 8px
 
 
   .blog-img-overlay
@@ -60,6 +75,9 @@ $margin-bottom: 50px
       margin: 0px 60px
 
 //related-topics section
+.related-topics
+  @include desktop
+    width: 80vh
 .blog-img:hover img
   opacity: 0.3
 
@@ -218,6 +236,10 @@ $margin-bottom: 50px
   margin-left: .25em
 
 //category styling
+.category-section
+  @include desktop
+    width: 50vh
+
 .list-group-item
   &:hover
     background-color: color(title-light)
