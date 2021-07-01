@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DetailedNewsComponent } from './components/news-page/children/detailed-news/detailed-news.component';
 import { AddBlogComponent } from './components/news-page/children/add-blog/add-blog.component';
 import {HttpClientModule} from '@angular/common/http';
+import {StickyModule} from 'ngx-sticky-kit';
 
 
 @NgModule({
@@ -21,12 +22,13 @@ import {HttpClientModule} from '@angular/common/http';
     DetailedNewsComponent,
     AddBlogComponent,
   ],
-  imports: [
-    CommonModule,
-    MyModuleRoutingModule,
-    AppRoutingModule,
-    HttpClientModule
-  ]
+    imports: [
+        CommonModule,
+        MyModuleRoutingModule,
+        AppRoutingModule,
+        HttpClientModule,
+        StickyModule
+    ]
 })
 export class MyModuleModule {
 }
