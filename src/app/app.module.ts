@@ -8,7 +8,6 @@ import {MyModuleRoutingModule} from './my-module/my-module-routing.module';
 import {MyModuleModule} from './my-module/my-module.module';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
 import {HttpClientModule} from '@angular/common/http';
-import {StickyModule} from 'ngx-sticky-kit';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import {StickyModule} from 'ngx-sticky-kit';
     MyModuleRoutingModule,
     MyModuleModule,
     NgxScrollTopModule,
-    HttpClientModule,
-    StickyModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
