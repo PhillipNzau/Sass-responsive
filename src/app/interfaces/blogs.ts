@@ -1,6 +1,6 @@
 export interface Blog {
   id: number;
-  bg_img: string;
+  bg_img_url: string;
   bg_title: string;
   bg_content: string;
   bg_author: string;
