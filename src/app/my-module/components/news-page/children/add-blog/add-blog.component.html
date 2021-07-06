@@ -2,27 +2,52 @@
 
 <section>
   <div class="add-blog container">
-    <form class="form-group container">
-      <!--blog category title-->
+    <form class="form-group container" [formGroup]="addBlogForm">
+      <!--blog image-->
       <div class="mb-3">
-        <label for="blogCategory" class="form-label">Blog Category</label>
-        <input type="text" class="form-control" id="blogCategory" aria-describedby="blogCategory">
+        <label for="blogImage" class="form-label">Blog Image Url</label>
+        <input type="text" class="form-control" id="blogImage" aria-describedby="blogCategory" [(ngModel)]="bg_img_url">
       </div>
-      <!--category title-->
+      <!--category image-->
 
       <!--blog title-->
       <div class="mb-3">
         <label for="blogTitle" class="form-label">Blog Title</label>
-        <input type="text" class="form-control" id="blogTitle" aria-describedby="blogTitle">
+        <input type="text" class="form-control" id="blogTitle" aria-describedby="blogTitle" [(ngModel)]="bg_title">
       </div>
       <!--blog title-->
 
-      <!--blog sub-title-->
+      <!--blog content-->
       <div class="mb-3">
-        <label for="blogSubtitle" class="form-label">Blog Content</label>
-        <textarea class="form-control" aria-label="With textarea" id="blogSubtitle" rows="10"></textarea>
+        <label for="blogContent" class="form-label">Blog Content</label>
+        <textarea class="form-control" aria-label="With textarea" id="blogContent" rows="10" [(ngModel)]="bg_content"></textarea>
       </div>
-      <!--blog sub-title-->
+      <!--blog content-->
+
+      <!--blog author-->
+      <div class="mb-3">
+        <label for="blogAuthor" class="form-label">Blog Author</label>
+        <input type="text" class="form-control" id="blogAuthor" aria-describedby="blogTitle" [(ngModel)]="bg_author">
+      </div>
+      <!--blog author-->
+
+      <!--blog upload date-->
+      <div class="mb-3">
+        <label for="blogDate" class="form-label">Blog Upload Date</label>
+<!--        <calender></calender>-->
+        <input type="text" class="form-control" id="blogDate" aria-describedby="blogTitle" [(ngModel)]="bg_upload_date">
+      </div>
+      <!--blog upload date-->
+
+      <!--blog category-->
+      <div class="mb-3">
+        <label for="blogCategory" class="form-label">Blog Category</label>
+        <select class="form-control" id="blogCategory" aria-describedby="blogTitle" *ngFor="let category of categories">
+          <option value="" [ngValue]="category.cat_name">{{category.cat_name}}</option>
+        </select>
+<!--        <input type="text" class="form-control" id="blogCategory" aria-describedby="blogTitle" [(ngModel)]="bg_category">-->
+      </div>
+      <!--blog title-->
 
       <button type="submit" class="btn add-blog-btn">Post Blog</button>
     </form>
